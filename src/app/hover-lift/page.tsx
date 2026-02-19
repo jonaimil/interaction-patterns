@@ -54,11 +54,11 @@ export default function HoverLiftPage() {
         <h2 className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
           Properties isolated
         </h2>
-        <div className="flex gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {/* Scale only */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ scale: 1.08 }}
               transition={spring}
@@ -69,7 +69,7 @@ export default function HoverLiftPage() {
           {/* TranslateY only */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ y: -12 }}
               transition={spring}
@@ -80,7 +80,7 @@ export default function HoverLiftPage() {
           {/* Shadow only */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ boxShadow: SHADOW.hover }}
               transition={{ duration: 0.3 }}
@@ -91,7 +91,7 @@ export default function HoverLiftPage() {
           {/* All three combined */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{
                 scale: 1.05,
@@ -110,11 +110,11 @@ export default function HoverLiftPage() {
         <h2 className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
           Spring feel comparison
         </h2>
-        <div className="flex gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {/* No bounce — critically damped */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ scale: 1.08, y: -8, boxShadow: SHADOW.hover }}
               transition={{ type: "spring", visualDuration: 0.3, bounce: 0 }}
@@ -126,7 +126,7 @@ export default function HoverLiftPage() {
           {/* Subtle bounce */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ scale: 1.08, y: -8, boxShadow: SHADOW.hover }}
               transition={{ type: "spring", visualDuration: 0.3, bounce: 0.15 }}
@@ -138,7 +138,7 @@ export default function HoverLiftPage() {
           {/* Medium bounce */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ scale: 1.08, y: -8, boxShadow: SHADOW.hover }}
               transition={{ type: "spring", visualDuration: 0.4, bounce: 0.3 }}
@@ -150,7 +150,7 @@ export default function HoverLiftPage() {
           {/* High bounce */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+              className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
               style={{ boxShadow: SHADOW.rest }}
               whileHover={{ scale: 1.08, y: -8, boxShadow: SHADOW.hover }}
               transition={{ type: "spring", visualDuration: 0.5, bounce: 0.5 }}
@@ -166,11 +166,11 @@ export default function HoverLiftPage() {
         <h2 className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
           Scale magnitude
         </h2>
-        <div className="flex gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           {[1.02, 1.05, 1.1, 1.2].map((s) => (
             <div key={s} className="space-y-2 text-center">
               <motion.div
-                className="h-32 w-24 rounded-xl bg-white cursor-pointer"
+                className="h-32 w-24 mx-auto rounded-xl bg-white cursor-pointer"
                 style={{ boxShadow: SHADOW.rest }}
                 whileHover={{
                   scale: s,

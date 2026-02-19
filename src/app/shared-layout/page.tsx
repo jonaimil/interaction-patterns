@@ -36,7 +36,7 @@ function TabDemo() {
           <button
             key={tab}
             onClick={() => setActive(i)}
-            className="relative rounded-lg px-4 py-2 text-sm font-medium cursor-pointer"
+            className="relative rounded-lg px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium cursor-pointer"
           >
             {active === i && (
               <motion.div
@@ -75,7 +75,7 @@ function CardExpandDemo() {
         layoutId — card expand morph
       </h2>
       <div className="relative">
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {ITEMS.map((item) => (
             <motion.div
               key={item.id}
@@ -133,7 +133,7 @@ function ToggleLayoutDemo() {
           {isGrid ? "List" : "Grid"}
         </button>
       </div>
-      <div className={isGrid ? "grid grid-cols-3 gap-2 w-64" : "flex flex-col gap-2 w-64"}>
+      <div className={isGrid ? "grid grid-cols-3 gap-2 w-full max-w-64" : "flex flex-col gap-2 w-full max-w-64"}>
         {items.map((item) => (
           <motion.div
             key={item}

@@ -126,7 +126,7 @@ export default function CardFlipPage() {
         <h2 className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
           Perspective depth
         </h2>
-        <div className="flex gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
           <FlipCard perspective={200} label="200px" sublabel="extreme, warped" />
           <FlipCard perspective={600} label="600px" sublabel="dramatic" />
           <FlipCard perspective={1200} label="1200px" sublabel="subtle" />
@@ -139,7 +139,7 @@ export default function CardFlipPage() {
         <h2 className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
           Rotation axis
         </h2>
-        <div className="flex gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           <AxisCard axis="Y" label="horizontal flip" />
           <AxisCard axis="X" label="vertical flip" />
           <TiltCard />

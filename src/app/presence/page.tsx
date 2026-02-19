@@ -38,7 +38,7 @@ function BasicPresenceDemo() {
           {show ? "Remove" : "Add"}
         </button>
       </div>
-      <div className="flex gap-8">
+      <div className="flex flex-wrap justify-center gap-8">
         {/* Without AnimatePresence */}
         <div className="space-y-2 text-center">
           <div className="flex h-40 w-28 items-center justify-center">
@@ -102,7 +102,7 @@ function ExitDirectionsDemo() {
           {show ? "Remove" : "Add"}
         </button>
       </div>
-      <div className="flex gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
         {directions.map(({ label, exit }) => (
           <div key={label} className="space-y-2 text-center">
             <div className="flex h-40 w-24 items-center justify-center">
@@ -145,7 +145,7 @@ function ModeDemo() {
           Next
         </button>
       </div>
-      <div className="flex gap-10">
+      <div className="flex flex-wrap justify-center gap-10">
         {/* mode="sync" */}
         <div className="space-y-2 text-center">
           <div className="relative flex h-40 w-28 items-center justify-center overflow-hidden rounded-2xl border-2 border-dashed border-neutral-300">

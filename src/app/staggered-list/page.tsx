@@ -104,7 +104,7 @@ export default function StaggeredListPage() {
           </h2>
           <ReplayButton onReplay={() => replay("stagger")} />
         </div>
-        <div className="flex gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10">
           {[0, 0.05, 0.12, 0.25].map((stagger) => (
             <div key={`${stagger}-${keys.stagger}`} className="space-y-2 text-center">
               <motion.div
@@ -143,7 +143,7 @@ export default function StaggeredListPage() {
           </h2>
           <ReplayButton onReplay={() => replay("directions")} />
         </div>
-        <div className="flex gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10">
           {[
             { label: "fade up", sublabel: "y: 20 → 0", variant: fadeUp },
             { label: "fade left", sublabel: "x: -30 → 0", variant: fadeLeft },
@@ -182,7 +182,7 @@ export default function StaggeredListPage() {
         </div>
         <motion.div
           key={keys.timing}
-          className="flex w-80 flex-col gap-2"
+          className="flex w-full max-w-80 flex-col gap-2"
           variants={container(0.08)}
           initial="hidden"
           animate="visible"

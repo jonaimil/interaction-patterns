@@ -47,11 +47,11 @@ export default function DragSnapPage() {
         <h2 className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
           Drag axis
         </h2>
-        <div className="flex gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
           {/* X only */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
+              className="h-32 w-24 mx-auto rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={0.5}
@@ -64,7 +64,7 @@ export default function DragSnapPage() {
           {/* Y only */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
+              className="h-32 w-24 mx-auto rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
               drag="y"
               dragConstraints={{ top: 0, bottom: 0 }}
               dragElastic={0.5}
@@ -77,7 +77,7 @@ export default function DragSnapPage() {
           {/* Free */}
           <div className="space-y-2 text-center">
             <motion.div
-              className="h-32 w-24 rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
+              className="h-32 w-24 mx-auto rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
               drag
               dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
               dragElastic={0.5}
@@ -94,11 +94,11 @@ export default function DragSnapPage() {
         <h2 className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
           dragElastic — rubber band feel
         </h2>
-        <div className="flex gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {[0, 0.2, 0.5, 1.0].map((elastic) => (
             <div key={elastic} className="space-y-2 text-center">
               <motion.div
-                className="h-32 w-24 rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
+                className="h-32 w-24 mx-auto rounded-xl bg-white shadow-lg cursor-grab active:cursor-grabbing"
                 drag
                 dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
                 dragElastic={elastic}
@@ -123,7 +123,7 @@ export default function DragSnapPage() {
         <h2 className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
           dragConstraints — bounded area via ref
         </h2>
-        <div className="flex gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {/* Small box */}
           <div className="space-y-2 text-center">
             <div
@@ -165,7 +165,7 @@ export default function DragSnapPage() {
         <h2 className="text-xs font-mono text-neutral-400 uppercase tracking-widest">
           dragMomentum — flick vs stop
         </h2>
-        <div className="flex gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           <div className="space-y-2 text-center">
             <div
               ref={boundRef3}

@@ -34,7 +34,7 @@ function AnimatedBar({
   return (
     <div className="space-y-2">
       <div
-        className="relative h-10 w-72 cursor-pointer rounded-xl bg-neutral-200 overflow-hidden"
+        className="relative h-10 w-full max-w-72 cursor-pointer rounded-xl bg-neutral-200 overflow-hidden"
         onClick={() => setToggled(!toggled)}
       >
         <motion.div
@@ -62,7 +62,7 @@ function ScaleComparison() {
       >
         Toggle
       </button>
-      <div className="flex gap-8">
+      <div className="flex flex-wrap justify-center gap-8">
         <div className="space-y-2 text-center">
           <motion.div
             className="h-24 w-24 rounded-xl bg-white shadow-md mx-auto"
