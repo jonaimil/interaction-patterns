@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, useMotionValue, useTransform, animate, PanInfo } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, PanInfo, type MotionValue } from "framer-motion";
 import Link from "next/link";
 
 // ============================================================
@@ -120,7 +120,7 @@ export default function GestureCarouselPage() {
   );
 }
 
-function CardItem({ index, x }: { index: number; x: ReturnType<typeof useMotionValue> }) {
+function CardItem({ index, x }: { index: number; x: MotionValue<number> }) {
   const cardCenter = index * STEP + CARD_WIDTH / 2;
   const scale = useTransform(x, [-(cardCenter + CARD_WIDTH), -cardCenter + CARD_WIDTH / 2, -(cardCenter - CARD_WIDTH * 1.5)], [0.9, 1, 0.9]);
   const opacity = useTransform(x, [-(cardCenter + CARD_WIDTH), -cardCenter + CARD_WIDTH / 2, -(cardCenter - CARD_WIDTH * 1.5)], [0.5, 1, 0.5]);

@@ -40,22 +40,22 @@ const container = (stagger: number) => ({
 // The parent's stagger controls WHEN each child starts.
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring", visualDuration: 0.4, bounce: 0.1 } },
+  visible: { opacity: 1, y: 0, transition: { type: "spring" as const, visualDuration: 0.4, bounce: 0.1 } },
 };
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { type: "spring", visualDuration: 0.4, bounce: 0.1 } },
+  visible: { opacity: 1, x: 0, transition: { type: "spring" as const, visualDuration: 0.4, bounce: 0.1 } },
 };
 
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { type: "spring", visualDuration: 0.3, bounce: 0.2 } },
+  visible: { opacity: 1, scale: 1, transition: { type: "spring" as const, visualDuration: 0.3, bounce: 0.2 } },
 };
 
 const popIn = {
   hidden: { opacity: 0, scale: 0.3, y: 10 },
-  visible: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", visualDuration: 0.35, bounce: 0.35 } },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { type: "spring" as const, visualDuration: 0.35, bounce: 0.35 } },
 };
 
 const ITEMS = Array.from({ length: 6 }, (_, i) => i);
